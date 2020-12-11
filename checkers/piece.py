@@ -3,8 +3,8 @@ from .constants import RED, WHITE, SQUARE_SIZE, GREY
 
 
 class Piece:
-    PADDING = 10
-    OUTLINE = 2
+    PADDING = 15
+    OUTLINE = 3
 
     def __init__(self, row, col, color):
         self.row = row
@@ -19,6 +19,7 @@ class Piece:
 
         self.x = 0
         self.y = 0
+        self.calc_pos()
 
     def calc_pos(self):
         self.x = SQUARE_SIZE * self.col + SQUARE_SIZE // 2 
